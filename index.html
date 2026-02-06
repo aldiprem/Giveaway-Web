@@ -3,33 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>Giveaway</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div class="card">
-  <span id="status" class="badge">AKTIF</span>
+  <h1 id="title">🎉 Giveaway</h1>
+  <p id="desc">Memuat giveaway...</p>
 
-  <h1 id="title">Loading...</h1>
-
-  <pre id="text" class="text"></pre>
-
-  <div class="info">
-    <div>
-      <strong id="winner">-</strong>
-      <span>Pemenang</span>
-    </div>
-    <div>
-      <strong id="participants">-</strong>
-      <span>Peserta</span>
-    </div>
+  <div id="login-area">
+    <script
+      src="https://telegram.org/js/telegram-widget.js?22"
+      data-telegram-login="freebiestbot"
+      data-size="large"
+      data-userpic="true"
+      data-request-access="write"
+      data-onauth="onTelegramAuth">
+    </script>
   </div>
 
-  <div id="countdown" class="countdown">⏳ Menghitung waktu...</div>
-
-  <a id="joinBtn" class="btn" target="_blank">🎉 Ikut Giveaway</a>
+  <button id="joinBtn" disabled>⏳ Menunggu login...</button>
+  <p id="status"></p>
 </div>
 
-<script src="script.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
